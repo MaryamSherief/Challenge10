@@ -1,0 +1,154 @@
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --why-us-bg: #4abfbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Gray);
+}
+
+main {
+    max-width: 45rem;
+    display: grid;
+    margin: auto;
+    grid-template-rows: 45% 50%;
+    box-shadow: 0 5px 10px 10px rgba(0,0,0,.05);
+}
+
+.first-half {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.first-half h1 {
+    color: var(--Cyan);
+    margin-bottom: 2rem;
+}
+
+.first-half h3 {
+    color: var(--Bright-Yellow);
+    margin-bottom: .8rem;
+}
+
+.first-half p {
+    color: var(--Grayish-Blue);
+    line-height: 1.7;
+}
+
+.second-half {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.one {
+    padding: 3rem;
+    background-color: var(--Cyan);
+    color: #fff;
+    border-radius: 0 0 0 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.one h2 {
+    margin-bottom: 1rem;
+}
+
+.one .price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: -1rem;
+}
+
+.one .price span {
+    color: #fff;
+    opacity: .5;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.one p {
+    margin-bottom: 1.5rem;
+}
+
+.one button {
+    align-self: center;
+    width: 18rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    background-color: var(--Bright-Yellow);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+button:active {
+    transform: scale(.9);
+    transition: .2s;
+}
+
+.two {
+    padding: 3rem;
+    background-color: var(--why-us-bg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 0 0 5px 0;
+    color: #fff;
+}
+
+.two h2 {
+    margin-bottom: 1rem;
+}
+
+.two ul li {
+    list-style: none;
+    margin-bottom: .3rem;
+    opacity: .6;
+}
+
+@media (max-width: 740px) {
+    body {
+        text-align: center;
+        margin: 2rem;
+    }
+    main {
+        min-width: 20rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .second-half {
+        display: flex;
+        flex-direction: column;
+    }
+    .one {
+        border-radius: 0 0 0 0;
+    }
+    .two {
+        text-align: left;
+        border-radius: 0 0 5px 5px;
+    }
+}
